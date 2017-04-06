@@ -1,0 +1,49 @@
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 col">
+				<h4>Sitemap</h4>
+				<ul>
+					<li ><a href="#">Home</a></li>
+					<li><a href="#about">About</a></li>
+					
+					<li class="dropdown">
+					  <a href="#" >Blog</a>
+					  <ul >
+						<li><a href="#">Programming</a></li>
+						<li><a href="#">Malta</a></li>
+					  </ul>
+					</li>
+					<li><a href="#contact">Contact</a></li>
+				  </ul>
+			</div>
+			<div class="col-md-4 col">
+				<h4>Show me the source!</h4>
+				<p>
+					<i>This project is </i><strong>free</strong><i> and </i><strong>open-source</strong><i>, yay!</i>
+					<br/><br/>
+					<a href="#" target="_blank"><span class="glyphicon glyphicon-check"></span> The CMS source code</a>
+					<br/>
+					<a href="#" target="_blank"><span class="glyphicon glyphicon-check"></span> The front-end source code</a>
+				</p>
+				<p style="text-align:center">
+					<img src="assets/images/powered-django.png" alt="Powered by: Django"/>
+					<img src="assets/images/powered-angular2.png" alt="Powered by: Angular 2"/>
+				</p>
+			</div>
+			<div class="col-md-4 col">
+				<h4>About</h4>
+				<p>
+					The purpose of this project is to be my personal playground, for learning new technologies.
+					<br/> <br/> If you want to know more about me check the <a href="#">Contacts</a> section. 
+				</p>
+				<a [routerLink]="['/about']" class="btn btn-default">Check the 'About' page</a>
+			</div>
+		</div>
+		<div class="row down">
+			<div class="col-md-12">
+				The content on this page is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+			</div>
+		</div>
+	</div>
+</footer>

@@ -1,0 +1,34 @@
+<!-- Fixed navbar -->
+<nav id="header_nav" class="big navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+	<img id="logo-img-desktop" src="assets/images/bp-logo-big-transparent.png" alt="Benchparty logo"/>
+	<img id="logo-img-mobile" src="assets/images/mobile-logo.png" alt="Benchparty logo"/>
+      </a>
+    </div>
+    <div class="row">
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li [routerLinkActive]="['active']"><a [routerLink]="['/home']">Home</a></li>
+        <li [routerLinkActive]="['active']"><a [routerLink]="['/about']">About</a></li>
+        
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Blog <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Programming</a></li>
+            <li><a href="#">Malta</a></li>
+          </ul>
+        </li>
+        <li [routerLinkActive]="['active']"><a [routerLink]="['/contact']">Contact</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+    </div>
+  </div>
+</nav>
