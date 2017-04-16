@@ -13,10 +13,10 @@ import { Page } from './page'
 export class PageComponent implements OnInit {
 
 	private sub: any;
-	slug: string;
-	page: Page = {
-		title: "Test",
-		content: ""
+		slug: string;
+		page: Page = {
+			title: "Test",
+			content: ""
 	}
 
 	constructor(

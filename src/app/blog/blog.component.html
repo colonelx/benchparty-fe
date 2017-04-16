@@ -1,0 +1,55 @@
+<div class="main">
+		<div class="container main" role="head-image">
+			<div class="row ">
+				<div class="col-md-12 page-head-image" [style.background-image]="'url(' + post.image + ')'">
+					<h1>{{post.title}}</h1>
+					
+				</div>
+			</div>
+			<div class="row page-content">
+				<div class="col-md-10 left-column"  [innerHTML]="post.content">
+					
+				</div>
+				<div class="col-md-2 right-column">
+						<div class="row">
+							<div class="col-md-12">
+								<h3>Post information</h3>
+								<ul>
+									<li>
+										<span class="glyphicon glyphicon-time"></span>
+										{{post.updated |  date:'dd MMM yyyy @ h:mma' }}
+									</li>
+									<li >
+										<span class="glyphicon glyphicon-tags"></span> 
+										<!--<a href="#">programing</a>, <a href="#">python</a>, <a href="#">linux</a>-->
+										<span *ngFor="let category of post.categories; let isLast=last">
+											<a [routerLink]="['/blog/category/', category.slug]">{{category.name}}</a>{{isLast ? '' : ', '}}
+										</span>
+									</li>
+								</ul>
+							</div>
+							<!--<div class="col-md-12">
+								<h3>Categories</h3>
+								<ul class="ordered">
+									<li>
+										<a href="#">Programing</a>
+										<ul>
+											<li><a href="#">PHP</a></li>
+											<li><a href="#">Python</a></li>
+											<li><a href="#">Django</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">Malta</a>
+										<ul>
+											<li><a href="#">Places</a></li>
+											<li><a href="#">Events</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>-->
+						</div>	
+				</div>
+			</div>
+		</div>
+	</div>

@@ -10,8 +10,9 @@
 					<li class="dropdown">
 					  <a href="#" >Blog</a>
 					  <ul >
-						<li><a href="#">Programming</a></li>
-						<li><a href="#">Malta</a></li>
+						<li *ngFor="let category of blog_categories">
+			              <a [routerLink]="['/category', category.slug]">{{category.title}}</a>
+			            </li>
 					  </ul>
 					</li>
 					<li><a href="#contact">Contact</a></li>
@@ -22,13 +23,13 @@
 				<p>
 					<i>This project is </i><strong>free</strong><i> and </i><strong>open-source</strong><i>, yay!</i>
 					<br/><br/>
-					<a href="#" target="_blank"><span class="glyphicon glyphicon-check"></span> The CMS source code</a>
+					<a href="https://github.com/colonelx/benchparty-cms" target="_blank"><span class="glyphicon glyphicon-check"></span> The CMS source code</a>
 					<br/>
-					<a href="#" target="_blank"><span class="glyphicon glyphicon-check"></span> The front-end source code</a>
+					<a href="https://github.com/colonelx/benchparty-fe" target="_blank"><span class="glyphicon glyphicon-check"></span> The front-end source code</a>
 				</p>
 				<p style="text-align:center">
 					<img src="assets/images/powered-django.png" alt="Powered by: Django"/>
-					<img src="assets/images/powered-angular2.png" alt="Powered by: Angular 2"/>
+					<img src="assets/images/powered-angular.png" alt="Powered by: AngularJS"/>
 				</p>
 			</div>
 			<div class="col-md-4 col">

@@ -8,7 +8,12 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { MainComponent } from './main/main.component';
 import { PageModule } from './page/page.module';
+import { BlogModule } from './blog/blog.module';
+import { HomeModule } from './home/home.module';
 import { PageComponent } from './page/page.component';
+import { HomeComponent } from './home/home.component';
+import { BlogComponent } from './blog/blog.component';
+import { CategoryComponent } from './blog/category.component';
 import { RouterModule , Routes }   from '@angular/router';
 
 const appRoutes: Routes = [
@@ -17,6 +22,12 @@ const appRoutes: Routes = [
     redirectTo: '/home',
     pathMatch: 'full'
   },
+  {
+    path: 'home',
+    component: HomeComponent,
+    pathMatch: 'full'
+  },
+  
   {
     path: ':slug',
     component: PageComponent,
@@ -30,6 +41,7 @@ const appRoutes: Routes = [
     FooterComponent,
     HeaderComponent,
     MainComponent,
+    HomeComponent,
 //    PageComponent,
   ],
   imports: [
@@ -37,7 +49,9 @@ const appRoutes: Routes = [
     FormsModule,
     HttpModule,
     RouterModule.forRoot(appRoutes),
-    PageModule
+    PageModule,
+    BlogModule,
+    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
